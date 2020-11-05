@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="C:\Users\SpyCl\.Rider2019.3\system\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\SpyCl\.Rider2019.3\system\resharper-host\local\Transient\ReSharperHost\v193\SolutionCaches\_Test.-928303738.00" t="ExcludeRecursive" />
+    <e p="C:\Users\SpyCl\OneDrive\Документы\Test" t="IncludeRecursive">
+      <e p="Assembly-CSharp-Editor-firstpass.csproj" t="IncludeRecursive" />
+      <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
+      <e p="Assets" t="Include">
+        <e p="Editor" t="Include">
+          <e p="NavMeshComponentsEditor.asmdef" t="Include" />
+          <e p="NavMeshComponentsGUIUtility.cs" t="Include" />
+          <e p="NavMeshLinkEditor.cs" t="Include" />
+          <e p="NavMeshModifierEditor.cs" t="Include" />
+          <e p="NavMeshModifierVolumeEditor.cs" t="Include" />
+          <e p="NavMeshSurfaceEditor.cs" t="Include" />
+        </e>
+        <e p="Plugins" t="Include">
+          <e p="GitHub" t="Include">
+            <e p="Editor" t="Include">
+              <e p="credits.txt" t="Include" />
+              <e p="eula.txt" t="Include" />
+              <e p="ExtensionLoader.cs" t="Include" />
+              <e p="UnityAPIWrapper.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="ProjectSettings" t="Include">
+          <e p="ProjectVersion.txt" t="Include" />
+        </e>
+        <e p="Scripts" t="Include">
+          <e p="Character" t="Include">
+            <e p="AttackState.cs" t="Include" />
+            <e p="CharacterControl.cs" t="Include" />
+            <e p="CharacterData.cs" t="Include" />
+          </e>
+          <e p="Enemy" t="Include">
+            <e p="EnemyControl.cs" t="Include" />
+            <e p="EnemyData.cs" t="Include" />
+            <e p="EnemySpawner.cs" t="Include" />
+          </e>
+          <e p="MouseManager.cs" t="Include" />
+          <e p="PlayerController.cs" t="Include" />
+          <e p="UI" t="Include">
+            <e p="UIManager.cs" t="Include" />
+          </e>
+          <e p="UnitSystem" t="Include">
+            <e p="StatSystem.cs" t="Include" />
+            <e p="UnitData.cs" t="Include" />
+          </e>
+          <e p="Weapons" t="Include">
+            <e p="Weapon.cs" t="Include" />
+            <e p="WeaponDamage.cs" t="Include" />
+          </e>
+        </e>
+        <e p="Scripts 1" t="Include">
+          <e p="NavMeshComponents.asmdef" t="Include" />
+          <e p="NavMeshLink.cs" t="Include" />
+          <e p="NavMeshModifier.cs" t="Include" />
+          <e p="NavMeshModifierVolume.cs" t="Include" />
+          <e p="NavMeshSurface.cs" t="Include" />
+        </e>
+      </e>
+      <e p="NavMeshComponents.csproj" t="IncludeRecursive" />
+      <e p="NavMeshComponentsEditor.csproj" t="IncludeRecursive" />
+      <e p="obj" t="ExcludeRecursive" />
+      <e p="Packages" t="ExcludeRecursive" />
+      <e p="Temp\bin" t="ExcludeRecursive" />
+      <e p="Test.sln" t="IncludeFlat" />
+    </e>
+  </component>
+</project>
