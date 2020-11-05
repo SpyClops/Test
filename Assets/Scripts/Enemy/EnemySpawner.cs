@@ -1,4 +1,5 @@
 ﻿using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -9,6 +10,7 @@ public class EnemySpawner : MonoBehaviour
     [SerializeField] private GameObject _enemyPrefab;
     [SerializeField] private Vector3 _areaSize;
 
+    public List<GameObject> wayPoints;
     private bool spawnBlock;
     private void Start()
     {
@@ -35,12 +37,9 @@ public class EnemySpawner : MonoBehaviour
 
         spawnBlock = false;
     }
-    public Vector3 NextPosition()
-    {
-        float x = Random.Range(-_areaSize.x/2, _areaSize.x/2);
-        float z = Random.Range(-_areaSize.z/2, _areaSize.z/2);
-
-        return transform.TransformPoint(x, 0, z);
+    public Vector3 NextPosition() {
+        int i = Random.Range(0, wayPoints.Count);
+        return transform.TransformPoint(wayPoints[i].transform.position);
     }
     
     void OnDrawGizmosSelected()

@@ -25,7 +25,7 @@ public class PlayerController : MonoBehaviour {
     private UnitData lastTegetCharacterData;
     
     private UIManager uiManager;
-    
+    private Renderer _renderer;
     
     private Camera mainCamera;
     public LayerMask ClickableLayer;
@@ -42,7 +42,7 @@ public class PlayerController : MonoBehaviour {
         mainCamera = Camera.main;
         characterData.Init();
         AttackState._characterControl = this;
-        
+        _renderer = GetComponent<Renderer>();
     }
 
     public void Start() {
@@ -53,7 +53,8 @@ public class PlayerController : MonoBehaviour {
     public void Update() {
         // Key and mouse movement control
         //
-        float horisontal = Input.GetAxis("Horizontal");
+        if (!isDead) {
+            float horisontal = Input.GetAxis("Horizontal");
         float vertical = Input.GetAxis("Vertical");
         Vector3 movement = new Vector3(horisontal, 0f, vertical);
         if (movement.normalized.magnitude >= 0.1f) {
@@ -122,12 +123,14 @@ public class PlayerController : MonoBehaviour {
             }
             
         }
-        //
+        }
+        
+        
         
         
         //Respawn
-        if (isDead) 
-        {
+        else if (isDead) {
+            CurrentState = State.DEFAULT;
             deathTimer += Time.deltaTime;
             if (deathTimer > 3.0f)
                 GoToRespawn();
@@ -137,6 +140,8 @@ public class PlayerController : MonoBehaviour {
 
         if (characterData.Stats.CurrentHealth == 0) {
             isDead = true;
+            _renderer.enabled = false;
+            characterData.StartingWeapon.GetComponentInChildren<Renderer>().enabled = false;
             deathTimer = 0.0f;
         }
         //
@@ -146,14 +151,15 @@ public class PlayerController : MonoBehaviour {
 
     }
     
-    void GoToRespawn()
-    {
+    void GoToRespawn() {
+        _renderer.enabled = true;
+        characterData.StartingWeapon.GetComponentInChildren<Renderer>().enabled = true;
         agent.Warp(playerSpawn);
         agent.isStopped = true;
         agent.ResetPath();
             
         isDead = false;
-        //currentTargetCharacterData = null;
+        currentTargetCharacterData = null;
         CurrentState = State.DEFAULT;
         
         characterData.Stats.ChangeHealth(characterData.Stats.stats.health);
